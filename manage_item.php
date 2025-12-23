@@ -23,7 +23,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 			{
                 $count = count($_SESSION['item_card']);
                 // Check if file is uploaded
-                if(isset($_FILES['image']))
+                $image_url = $_POST['item_image_url'];
+                /*if(isset($_FILES['image']))
 				{
                     $file_name = $_FILES['image']['name'];
                     $file_tmp = $_FILES['image']['tmp_name'];
@@ -35,13 +36,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 				else 
 				{
                     $file_name = 'No file uploaded'; // Set default if no file is uploaded
-                }
+                }*/
                 // Add item to session
                 $_SESSION['item_card'][$count] = array(
                     'item_name' => $_POST['item_name'],
                     'item_price' => $_POST['item_price'],
                     'item_quantity' => 1,
-                    'Image' => $file_name
+                    'Image' => $item_image_url
                 );
                 echo "<script>
                 alert('Item added');
@@ -52,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 		else 
 		{
             // Check if file is uploaded
-            if(isset($_FILES['image']))
+            /*if(isset($_FILES['image']))
 			{
                 $file_name = $_FILES['image']['name'];
                 $file_tmp = $_FILES['image']['tmp_name'];
@@ -63,13 +64,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 			else 
 			{
                 $file_name = ''; // Set default if no file is uploaded
-            }
+            }*/
+            $item_image_url = $_POST['item_image_url'];
             // Add item to session
             $_SESSION['item_card'][0] = array(
                 'item_name' => $_POST['item_name'],
                 'item_price' => $_POST['item_price'],
                 'item_quantity' => 1,
-                'Image' => $file_name
+                'Image' => $item_image_url
             );
             echo "<script>
             alert('Item added');
@@ -82,11 +84,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         foreach ($_SESSION['item_card'] as $key => $value) {
             if ($value['item_name'] == $_POST['item_name']) {
                 // Remove the image file from directory
-                $image_file = $_SESSION['item_card'][$key]['Image'];
+                /*$image_file = $_SESSION['item_card'][$key]['Image'];
                 if (!empty($image_file)) {
                     $upload_directory = "images/";
                     unlink($upload_directory . $image_file);
-                }
+                }*/
                 // Remove item from session
                 unset($_SESSION['item_card'][$key]);
                 $_SESSION['item_card'] = array_values($_SESSION['item_card']);

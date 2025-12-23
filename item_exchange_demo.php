@@ -116,7 +116,7 @@ session_start();
                     </div>
                 </div>
 				
-				<a href="Categories.php" class="nav-item nav-link" style="color:#03AC13  !important">Categories</a>
+				<a href="categories_demo.php" class="nav-item nav-link" style="color:#03AC13  !important">Categories</a>
             <a href="schedule.php" class="nav-item nav-link login-button" style="color:#FF0000 ; border-radius: 20px; border: 2px solid #FF0000; padding: 7px 20px; margin-left: 10px; margin-top: 15px; height: 40px;">Cancel</a>
 
 		
@@ -154,6 +154,8 @@ if(isset($_SESSION['item_card']))
                 </div>
             </div>
             <div class="row g-4 portfolio-container">
+                
+            
                 <div class="col-lg-4 col-md-6 portfolio-item third wow fadeInUp" data-wow-delay="0.1s" onclick="toggleSelection(this)">
                     <div class="rounded overflow-hidden">
 					 <form action="manage_item.php" method="POST">
@@ -166,9 +168,11 @@ if(isset($_SESSION['item_card']))
                             <p class="text-primary fw-medium mb-2">Dustbin</p>
                             <h5 class="lh-base mb-0">Rs 233</h5>
 							<div class="position-relative">
-                            <button type="submit" name="add_item" class="btn btn-square btn-outline-light mx-1 position-absolute bottom-0 end-0" style="background-color: #03AC13; width: 100px; height: 40px; border-radius: 10px;">Add to cart</button>
-                             <input type="hidden" name="item_name" value="dustbin">
-							    <input type="hidden" name="item_price" value="233"></div>   
+                                <button type="submit" name="add_item" class="btn btn-square btn-outline-light mx-1 position-absolute bottom-0 end-0" style="background-color: #03AC13; width: 100px; height: 40px; border-radius: 10px;">Add to cart</button>
+                                <input type="hidden" name="item_name" value="dustbin">
+							    <input type="hidden" name="item_price" value="233">
+                                <input type="hidden" name="item_image_url" value="img/item5.webp"/> 
+                            </div>   
                         </div>
 						</div>
                     	</form>
@@ -190,9 +194,10 @@ if(isset($_SESSION['item_card']))
                             <h5 class="lh-base mb-0">Rs 179</a>
 							<div class="position-relative">
                             <button type="submit" name="add_item" class="btn btn-square btn-outline-light mx-1 position-absolute bottom-0 end-0" style="background-color: #03AC13; width: 100px; height: 40px; border-radius: 10px;">Add to cart</button>
-                             <input type="hidden" name="item_name" value="large size baslet">
-							    <input type="hidden" name="item_price" value="179"></div>   
-
+                            <input type="hidden" name="item_name" value="large size basket">
+							<input type="hidden" name="item_price" value="179">  
+                            <input type="hidden" name="item_image_url" value="img/item2.webp"/> 
+                        </div> 
                         </div>
 						</div>
                     	</form>
@@ -212,9 +217,10 @@ if(isset($_SESSION['item_card']))
                             <h5 class="lh-base mb-0">Rs 32</a>
 							<div class="position-relative">
                             <button type="submit" name="add_item" class="btn btn-square btn-outline-light mx-1 position-absolute bottom-0 end-0" style="background-color: #03AC13; width: 100px; height: 40px; border-radius: 10px;">Add to cart</button>
-                             <input type="hidden" name="item_name" value="use and throw cup">
-							    <input type="hidden" name="item_price" value="32"></div>   
-
+                            <input type="hidden" name="item_name" value="use and throw cup">
+							<input type="hidden" name="item_price" value="32">  
+                            <input type="hidden" name="item_image_url" value="img/item8.jpg"/> 
+                            </div> 
                         </div>
 						</div>
                     	</form>
@@ -235,7 +241,9 @@ if(isset($_SESSION['item_card']))
 							<div class="position-relative">
                             <button type="submit" name="add_item" class="btn btn-square btn-outline-light mx-1 position-absolute bottom-0 end-0" style="background-color: #03AC13; width: 100px; height: 40px; border-radius: 10px;">Add to cart</button>
                             <input type="hidden" name="item_name" value="mug">
-							    <input type="hidden" name="item_price" value="59"></div>   
+							<input type="hidden" name="item_price" value="59">
+                            <input type="hidden" name="item_image_url" value="img/item3.jpg"/> 
+                        </div>   
                         </div>
 						</div>
                     	</form>
@@ -256,8 +264,9 @@ if(isset($_SESSION['item_card']))
 							<div class="position-relative">
                             <button type="submit" name="add_item" class="btn btn-square btn-outline-light mx-1 position-absolute bottom-0 end-0" style="background-color: #03AC13; width: 100px; height: 40px; border-radius: 10px;">Add to cart</button>
                             <input type="hidden" name="item_name" value="sturdy mug">
-							    <input type="hidden" name="item_price" value="89"></div>   
-
+							<input type="hidden" name="item_price" value="89"> 
+                            <input type="hidden" name="item_image_url" value="img/item4.jpg"/> 
+                        </div>
                         </div>
 						</div>
                     	</form>
@@ -278,8 +287,9 @@ if(isset($_SESSION['item_card']))
 							<div class="position-relative">
                             <button type="submit" name="add_item" class="btn btn-square btn-outline-light mx-1 position-absolute bottom-0 end-0" style="background-color: #03AC13; width: 100px; height: 40px; border-radius: 10px;">Add to cart</button>
                              <input type="hidden" name="item_name" value="notebook">
-							    <input type="hidden" name="item_price" value="253"></div>  
-
+							    <input type="hidden" name="item_price" value="253">
+                                <input type="hidden" name="item_image_url" value="img/item9.jpg"/> 
+                            </div>  
                         </div>
 						</div>
                     	</form>
@@ -300,8 +310,9 @@ if(isset($_SESSION['item_card']))
 							<div class="position-relative">
                             <button type="submit" name="add_item" class="btn btn-square btn-outline-light mx-1 position-absolute bottom-0 end-0" style="background-color: #03AC13; width: 100px; height: 40px; border-radius: 10px;">Add to cart</button>
                             <input type="hidden" name="item_name" value="bucket">
-							    <input type="hidden" name="item_price" value="127"></div>   
-
+							<input type="hidden" name="item_price" value="127">   
+                            <input type="hidden" name="item_image_url" value="img/item7.webp"/> 
+                        </div>
                         </div>
 						</div>
                     	</form>
@@ -324,9 +335,10 @@ if(isset($_SESSION['item_card']))
                             <h5 class="lh-base mb-0">Rs 134</a>
 							<div class="position-relative">
                             <button type="submit" name="add_item" class="btn btn-square btn-outline-light mx-1 position-absolute bottom-0 end-0" style="background-color: #03AC13; width: 100px; height: 40px; border-radius: 10px;">Add to cart</button>
-                             <input type="hidden" name="item_name" value="dustbin">
-							    <input type="hidden" name="item_price" value="134"></div>   
-
+                            <input type="hidden" name="item_name" value="dustbin">
+							<input type="hidden" name="item_price" value="134">
+                            <input type="hidden" name="item_image_url" value="img/item6.avif"/>   
+                        </div>
                         </div>
 						</div>
                     	</form>
@@ -346,10 +358,10 @@ if(isset($_SESSION['item_card']))
                             <h5 class="lh-base mb-0">299</a>
 							<div class="position-relative">
                             <button type="submit" name="add_item" class="btn btn-square btn-outline-light mx-1 position-absolute bottom-0 end-0" style="background-color: #03AC13; width: 100px; height: 40px; border-radius: 10px;">Add to cart</button>
-							 <input type="hidden" name="item_name" value="best from west">
-							    <input type="hidden" name="item_price" value="299"></div>   
-           
-
+							<input type="hidden" name="item_name" value="best from west">
+							<input type="hidden" name="item_price" value="299">
+                            <input type="hidden" name="item_image_url" value="img/item10.png"/> 
+                        </div>   
                         </div>
 						</div>
                     	</form>

@@ -8,7 +8,7 @@ session_start();
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Interactive Cart</title>
 <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css'>
-<!--<link rel='stylesheet' href='css/item_exchange1.css'>-->
+<link rel='stylesheet' href='css/add_to_cart.css'>
 <script src='https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js'></script>
 <style>
 .btn-red {
@@ -35,7 +35,7 @@ session_start();
                         ?>
                         <div id="cartContainer" class="d-sm-flex justify-content-between my-4 pb-4 border-bottom">
                             <div class="media d-block d-sm-flex text-center text-sm-left">
-                                <a class="cart-item-thumb mx-auto mr-sm-4" href="#"><img src="https://www.bootdey.com/image/240x240/FF8C00/000000" alt="Product"></a>
+                                <a class="cart-item-thumb mx-auto mr-sm-4" href="#"><img src="<?php echo $value['Image']; ?>" alt="Product"></a>
                                 <div class="media-body pt-3">
                                     <h3 class="product-card-title font-weight-semibold border-0 pb-0"><a href="#"><?php echo $value['item_name']; ?></a></h3>
                                     <div class="font-size-lg text-primary pt-2">Price : <?php echo $value['item_price']; ?><input type="hidden" class="iprice" value="<?php echo $value['item_price']; ?>"></div>

@@ -121,7 +121,7 @@ session_start();
                         <!--<a href="404." class="dropdown-item">404 Page</a>-->
                     </div>
                 </div>
-				<a href="categories.php" class="nav-item nav-link" style="color:#03AC13  !important">Categories</a>
+				<a href="categories_demo.php" class="nav-item nav-link" style="color:#03AC13  !important">Categories</a>
             <a href="cpp_login.php" class="nav-item nav-link login-button" style="color:#03AC13 ; border-radius: 20px; border: 2px solid #03AC13; padding: 7px 20px; margin-left: 10px; margin-top: 15px; height: 40px;">Login</a>
 </div>
 <?php
