@@ -1,0 +1,8 @@
+.vs/
+uploads/
+images/*
+!images/.gitkeep
+
+*.zip
+*.log
+.env

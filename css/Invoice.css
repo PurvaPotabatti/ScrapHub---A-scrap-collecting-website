@@ -1,0 +1,92 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #03AC13;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+.invoice-header {
+    margin-bottom: 20px;
+}
+
+.pageTitle {
+    color:#03AC13; /* Green color */
+}
+
+/* Company and Customer Details */
+.ui.left.aligned.grid .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ui.left.aligned.grid .row .column {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    width: 100px; /* Adjust as needed */
+    border-radius: 50%; /* Make the logo round */
+}
+
+/* Card Styles */
+.card {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    padding: 20px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Button Styles */
+#addItemBtn {
+    padding: 10px 20px;
+    background-color: #03AC13; /* Green color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="number"] {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Total Amount Styles */
+#totalAmount {
+    font-size: 18px;
+    font-weight: bold;
+    color: #03AC13; /* Green color */
+}
