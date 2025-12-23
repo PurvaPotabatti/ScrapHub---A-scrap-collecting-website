@@ -3,7 +3,8 @@ session_start();
 
 if(isset($_POST['submit_btn'])) {
     // Check if the form fields are set before accessing them
-    if(isset($_POST['user_name']) && isset($_POST['mobile_number']) && isset($_POST['email_id'])) {
+    if(isset($_POST['user_name']) && isset($_POST['mobile_number']) && isset($_POST['email_id'])) 
+    {
         $_SESSION['user_name'] = $_POST['user_name'];
         $_SESSION['mobile_number'] = $_POST['mobile_number'];
         $_SESSION['email_id'] = $_POST['email_id'];
@@ -13,7 +14,9 @@ if(isset($_POST['submit_btn'])) {
         window.location.href='add_to_cart_demo.php'; 
         </script>";
         exit;
-    } else {
+    } 
+    else 
+    {
         // Handle the case where form fields are not set
         echo "<script>
         alert('Login failed: Please fill in all the fields');

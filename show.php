@@ -14,8 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['show'])) {
     $email_id = $_POST['email_id'];
 
     // Insert into order_manager
-    $insert_query1 = "INSERT INTO order_manager (username, mobile_no, email)
-                      VALUES ('$user_name','$mobile_number','$email_id')";
+    $insert_query1 = "INSERT INTO order_manager (username, mobile_no, email) VALUES ('$user_name','$mobile_number','$email_id')";
 
     if (mysqli_query($con, $insert_query1)) {
 
@@ -23,9 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['show'])) {
         $_SESSION['id'] = $order_id;
 
         // Insert cart items into user_orders with status CART
-        $insert_query2 = "INSERT INTO user_orders
-        (order_id, scrap_name, price, quantity, status)
-        VALUES (?,?,?,?,?)";
+        $insert_query2 = "INSERT INTO user_orders (order_id, scrap_name, price, quantity, status) VALUES (?,?,?,?,?)";
 
         $stmt = mysqli_prepare($con, $insert_query2);
 
