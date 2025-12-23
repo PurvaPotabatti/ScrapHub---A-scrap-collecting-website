@@ -120,7 +120,7 @@ if (isset($_SESSION['invoice_completed'])) {
                     </div>
                 </div>
 				<a href="categories_demo.php" class="nav-item nav-link" style="color:#03AC13  !important">Categories</a>
-            <a href="cpp_login.php" class="nav-item nav-link login-button" style="color:#03AC13 ; border-radius: 20px; border: 2px solid #03AC13; padding: 7px 20px; margin-left: 10px; margin-top: 15px; height: 40px;">Login</a>
+            <a href="cpp_login_demo.php" class="nav-item nav-link login-button" style="color:#03AC13 ; border-radius: 20px; border: 2px solid #03AC13; padding: 7px 20px; margin-left: 10px; margin-top: 15px; height: 40px;">Login</a>
 </div>
 <?php
 $count = 0;
